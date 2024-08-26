@@ -1,0 +1,125 @@
+90
+342
+function movimentaRaqueteOponente() {
+343
+91
+344
+    velocidadeYOponente = yBolinha - yRaqueteOponente - raqueteComprimento / 2 - 30;
+345
+92
+346
+    yRaqueteOponente += velocidadeYOponente
+347
+93
+348
+}
+349
+94
+350
+•
+351
+95
+352
+•
+353
+96
+354
+function incluiPlacar(){
+355
+97
+356
+  stroke(255)
+357
+98
+358
+    textAlign(CENTER);
+359
+99
+360
+    textSize(16);
+361
+100
+362
+    fill(color(255,140, 0));
+363
+101
+364
+    rect(150, 10, 40, 20);
+365
+102
+366
+    fill(255);
+367
+103
+368
+    text(meusPontos, 170, 26);
+369
+104
+370
+    fill(color(255,140, 0));
+371
+105
+372
+    rect(450, 10, 40, 20);
+373
+106
+374
+    fill(255);
+375
+107
+376
+    text(pontosDoOponente, 470, 26);
+377
+108
+378
+•
+379
+109
+380
+•
+381
+110
+382
+•
+383
+111
+384
+}
+385
+112
+386
+•
+387
+113
+388
+•
+389
+114
+390
+function marcaPonto() {
+391
+115
+392
+  if (xBolinha > 580) {
+393
+116
+394
+    meusPontos += 1;
+395
+117
+396
+  }
+397
+118
+398
+  if (xBolinha < 10) {
+399
+119
+400
+    pontosDoOponente += 1;
+401
+120
+402
+  }
+403
+}
